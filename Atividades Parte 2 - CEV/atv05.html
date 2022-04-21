@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATV5 - BRASIL X MUNDO</title>
+</head>
+<body>
+    <h1> Brasileiro ou Estrangeiro? </h1>
+    Qual o seu país natal : <input type="string" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var txtp = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var pas = String(txtp.value)
+            res.innerHTML = 'Seu país natal é <strong>' + pas + '</strong></p>'
+            if (pas != 'Brasil') {
+                res.innerHTML += '<p>Você é <strong>ESTRANGEIRO</strong> !'
+            } else {
+                res.innerHTML += '<p>Você é <strong>BRASILEIRO</strong> !'
+            }
+            res.innerHTML += '<p>*Certifique-se que digitou o nome de seu país natal da forma do exemplo "Argentina".</p>'
+        }
+    </script>
+    
+</body>
+</html>
